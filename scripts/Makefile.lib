@@ -129,7 +129,7 @@ modfile_flags  = -DKBUILD_MODFILE=$(call stringify,$(modfile))
 
 _c_flags       = $(filter-out $(CFLAGS_REMOVE_$(target-stem).o), \
                      $(filter-out $(ccflags-remove-y), \
-                         $(KBUILD_CPPFLAGS) $(KBUILD_CFLAGS) $(ccflags-y)) \
+                         -I$(src) $(KBUILD_CPPFLAGS) $(KBUILD_CFLAGS) $(ccflags-y)) \
                      $(CFLAGS_$(target-stem).o))
 _rust_flags    = $(filter-out $(RUSTFLAGS_REMOVE_$(target-stem).o), \
                      $(filter-out $(rustflags-remove-y), \
