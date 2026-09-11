@@ -1,0 +1,3 @@
+################################################################################
+## Inheriting configs from ACK
+. ${ROOT_DIR}/kernel/xiaomi/sm8650/build.config.msm.pineapple
