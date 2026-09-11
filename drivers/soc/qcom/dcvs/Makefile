@@ -4,6 +4,7 @@ qcom-pmu-lib-y := pmu_lib.o
 obj-$(CONFIG_QCOM_DCVS_FP) += dcvs_fp.o
 obj-$(CONFIG_QCOM_DCVS) += qcom-dcvs.o
 qcom-dcvs-y := dcvs.o dcvs_icc.o dcvs_epss.o trace-dcvs.o
+CFLAGS_trace-dcvs.o := -I$(src)
 obj-$(CONFIG_QCOM_MEMLAT) += memlat.o
 obj-$(CONFIG_QCOM_BWMON) += bwmon.o
 obj-$(CONFIG_QCOM_BWPROF) += bwprof.o
